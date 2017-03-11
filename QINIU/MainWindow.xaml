@@ -1,12 +1,19 @@
-﻿<Window x:Class="QINIU.MainWindow"
+﻿<WPFWindows:WindowBase  x:Class="QINIU.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QINIU"
+        xmlns:WPFWindows ="clr-namespace:WPFTools.Windows;assembly=WPFTools"
+         xmlns:Controls="clr-namespace:WPFTools.Controls;assembly=WPFTools"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <WPFWindows:WindowBase.HeadControl>
+        <Grid>
+            <Controls:IconButton FontAwesome="&#xf0ad;" Style="{StaticResource ResourceKey=IconButtonTransparency}"></Controls:IconButton>
+        </Grid>
+    </WPFWindows:WindowBase.HeadControl>
+        <Grid>
         
     </Grid>
-</Window>
+</WPFWindows:WindowBase>

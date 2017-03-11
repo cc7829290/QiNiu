@@ -3,7 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:QINIU"
              StartupUri="MainWindow.xaml">
+
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WPFTools;component/Styles/UI.xaml"/>
+                <ResourceDictionary Source="/WPFTools;component/Styles/UI.Dark.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
+    
 </Application>
