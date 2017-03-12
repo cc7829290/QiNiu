@@ -7,13 +7,14 @@
         xmlns:WPFWindows ="clr-namespace:WPFTools.Windows;assembly=WPFTools"
          xmlns:Controls="clr-namespace:WPFTools.Controls;assembly=WPFTools"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        DataContext="{Binding Source={StaticResource ResourceKey=Locator},Path=Main}"
+        Title="七牛云存储" Height="350" Width="525">
     <WPFWindows:WindowBase.HeadControl>
         <Grid>
-            <Controls:IconButton FontAwesome="&#xf0ad;" Style="{StaticResource ResourceKey=IconButtonTransparency}"></Controls:IconButton>
+            <Controls:IconButton FontAwesome="&#xf0ad;" Click="GotoSetting" Command="{Binding GotoSettingCommand}" Style="{StaticResource ResourceKey=IconButtonTransparency}"></Controls:IconButton>
         </Grid>
     </WPFWindows:WindowBase.HeadControl>
         <Grid>
-        
+        <Button Command="{Binding GotoSettingCommand}" >ssss</Button>
     </Grid>
 </WPFWindows:WindowBase>

@@ -1,0 +1,17 @@
+﻿<WPFWindows:WindowBase x:Class="QINIU.View.SettingWindow"
+        xmlns:WPFWindows ="clr-namespace:WPFTools.Windows;assembly=WPFTools"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QINIU.View"
+        xmlns:Controls="clr-namespace:WPFTools.Controls;assembly=WPFTools"
+        DataContext="{Binding Source={StaticResource ResourceKey=Locator},Path=Setting}"
+        mc:Ignorable="d"
+        Title="参数设置" Height="450" Width="350">
+    <Grid>
+        <Controls:ThemesManger Margin="0,10" SelectedTheme="0" SelectedAccentColor="AliceBlue" SelectedFontSize="16">
+            
+        </Controls:ThemesManger>
+    </Grid>
+</WPFWindows:WindowBase>

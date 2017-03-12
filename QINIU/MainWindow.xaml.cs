@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QINIU.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,14 @@ namespace QINIU
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void GotoSetting(object sender, RoutedEventArgs e)
+        {
+            SettingWindow win = new SettingWindow();
+            win.Owner = this;
+            win.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            win.ShowDialog();
         }
     }
 }
