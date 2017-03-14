@@ -11,7 +11,7 @@
         Title="七牛云存储" Height="350" Width="525">
     <WPFWindows:WindowBase.HeadControl>
         <Grid>
-            <Controls:IconButton FontAwesome="&#xf0ad;" Click="GotoSetting" Command="{Binding GotoSettingCommand}" Style="{StaticResource ResourceKey=IconButtonTransparency}"></Controls:IconButton>
+            <Controls:IconButton FontAwesome="&#xf0ad;" Click="GotoSetting" Style="{StaticResource ResourceKey=IconButtonTransparency}"></Controls:IconButton>
         </Grid>
     </WPFWindows:WindowBase.HeadControl>
         <Grid>

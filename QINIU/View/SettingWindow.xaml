@@ -8,10 +8,17 @@
         xmlns:Controls="clr-namespace:WPFTools.Controls;assembly=WPFTools"
         DataContext="{Binding Source={StaticResource ResourceKey=Locator},Path=Setting}"
         mc:Ignorable="d"
-        Title="参数设置" Height="450" Width="350">
-    <Grid>
-        <Controls:ThemesManger Margin="0,10" SelectedTheme="0" SelectedAccentColor="AliceBlue" SelectedFontSize="16">
-            
-        </Controls:ThemesManger>
-    </Grid>
+        xmlns:Properties="clr-namespace:QINIU.Properties"
+        Title="参数设置" Height="500" Width="300">
+    <StackPanel>
+        <Controls:ThemesManger  Margin="12" 
+                                SelectedAccentColor="{Binding Path=SelectedAccentColor,Source={x:Static Properties:Settings.Default},Mode=TwoWay}" 
+                                SelectedFontSize="{Binding Path=SelectedFontSize,Source={x:Static Properties:Settings.Default},Mode=TwoWay}"
+                                SelectedTheme="{Binding Path=SelectedTheme,Source={x:Static Properties:Settings.Default},Mode=TwoWay}"
+                                
+                                />
+        <Button  Margin="4"  Command="{Binding SaveSettingCommand }">确定</Button>
+        <Button  Margin="4"  Command="{Binding  ReloadSettingCommand }">默认</Button>
+
+    </StackPanel>
 </WPFWindows:WindowBase>

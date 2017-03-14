@@ -1,4 +1,6 @@
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using System.Windows.Input;
 
 namespace QINIU.ViewModel
 {
@@ -29,6 +31,28 @@ namespace QINIU.ViewModel
             ////{
             ////    // Code runs "for real"
             ////}
+            SaveSettingCommand = new RelayCommand(SaveSetting);
+            ReloadSettingCommand = new RelayCommand(ReloadSetting);
+
+        }
+        public ICommand SaveSettingCommand { get; set; }
+        public ICommand ReloadSettingCommand { get; set; }
+
+        /// <summary>
+        /// 保存设置
+        /// </summary>
+        private void SaveSetting()
+        {
+            //保存设置
+            Properties.Settings.Default.Save();
+        }
+        /// <summary>
+        /// 还原历史设置
+        /// </summary>
+        private void ReloadSetting()
+        {
+            Properties.Settings.Default.Reset();
+            Properties.Settings.Default.Save();
         }
     }
 }
