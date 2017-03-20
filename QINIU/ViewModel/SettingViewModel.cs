@@ -2,7 +2,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System.Windows.Input;
 
-namespace QINIU.ViewModel
+namespace QINIUYUN.ViewModel
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.

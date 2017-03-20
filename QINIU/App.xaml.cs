@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace QINIU
+namespace QINIUYUN
 {
     /// <summary>
     /// App.xaml 的交互逻辑
@@ -17,13 +17,13 @@ namespace QINIU
             base.OnStartup(e);
             //加载界面
             var AppearanceManager = WPFTools.Presentation.AppearanceManager.Current;
-            AppearanceManager.AccentColor = QINIU.Properties.Settings.Default.SelectedAccentColor;
-            AppearanceManager.FontSize = QINIU.Properties.Settings.Default.SelectedFontSize;
-            if (QINIU.Properties.Settings.Default.SelectedTheme == 0)
+            AppearanceManager.AccentColor = QINIUYUN.Properties.Settings.Default.SelectedAccentColor;
+            AppearanceManager.FontSize = QINIUYUN.Properties.Settings.Default.SelectedFontSize;
+            if (QINIUYUN.Properties.Settings.Default.SelectedTheme == 0)
             {
                 AppearanceManager.ThemeSource = WPFTools.Presentation.AppearanceManager.LightThemeSource;
             }
-            else if (QINIU.Properties.Settings.Default.SelectedTheme == 1)
+            else if (QINIUYUN.Properties.Settings.Default.SelectedTheme == 1)
             {
                 AppearanceManager.ThemeSource = WPFTools.Presentation.AppearanceManager.DarkThemeSource;
             }

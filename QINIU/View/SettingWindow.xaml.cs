@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace QINIU.View
+namespace QINIUYUN.View
 {
     /// <summary>
     /// SettingWindow.xaml 的交互逻辑
@@ -21,6 +21,11 @@ namespace QINIU.View
         public SettingWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

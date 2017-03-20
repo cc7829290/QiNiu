@@ -1,20 +1,20 @@
-﻿<WPFWindows:WindowBase  x:Class="QINIU.MainWindow"
+﻿<WPFWindows:WindowBase  x:Class="QINIUYUN.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QINIU"
+        xmlns:local="clr-namespace:QINIUYUN"
         xmlns:WPFWindows ="clr-namespace:WPFTools.Windows;assembly=WPFTools"
-         xmlns:Controls="clr-namespace:WPFTools.Controls;assembly=WPFTools"
+        xmlns:Controls="clr-namespace:WPFTools.Controls;assembly=WPFTools"
         mc:Ignorable="d"
-        DataContext="{Binding Source={StaticResource ResourceKey=Locator},Path=Main}"
+        DataContext="{Binding Source={StaticResource ResourceKey=Locator},Path=Main }"
         Title="七牛云存储" Height="350" Width="525">
     <WPFWindows:WindowBase.HeadControl>
         <Grid>
-            <Controls:IconButton FontAwesome="&#xf0ad;" Click="GotoSetting" Style="{StaticResource ResourceKey=IconButtonTransparency}"></Controls:IconButton>
+            <Controls:IconButton FontAwesome="&#xf0ad;" Click="GotoSetting" Style="{StaticResource IconButtonTransparency}"></Controls:IconButton>
         </Grid>
     </WPFWindows:WindowBase.HeadControl>
-        <Grid>
-        <Button Command="{Binding GotoSettingCommand}" >ssss</Button>
+    <Grid>
+        <Button >ssss</Button>
     </Grid>
 </WPFWindows:WindowBase>

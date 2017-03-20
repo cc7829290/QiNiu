@@ -1,24 +1,48 @@
-﻿<WPFWindows:WindowBase x:Class="QINIU.View.SettingWindow"
+﻿<WPFWindows:WindowBase x:Class="QINIUYUN.View.SettingWindow"
         xmlns:WPFWindows ="clr-namespace:WPFTools.Windows;assembly=WPFTools"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QINIU.View"
+        xmlns:local="clr-namespace:QINIUYUN.View"
         xmlns:Controls="clr-namespace:WPFTools.Controls;assembly=WPFTools"
         DataContext="{Binding Source={StaticResource ResourceKey=Locator},Path=Setting}"
         mc:Ignorable="d"
-        xmlns:Properties="clr-namespace:QINIU.Properties"
-        Title="参数设置" Height="500" Width="300">
+        xmlns:Properties="clr-namespace:QINIUYUN.Properties"
+        Title="参数设置" Height="600" Width="400">
     <StackPanel>
-        <Controls:ThemesManger  Margin="12" 
-                                SelectedAccentColor="{Binding Path=SelectedAccentColor,Source={x:Static Properties:Settings.Default},Mode=TwoWay}" 
-                                SelectedFontSize="{Binding Path=SelectedFontSize,Source={x:Static Properties:Settings.Default},Mode=TwoWay}"
-                                SelectedTheme="{Binding Path=SelectedTheme,Source={x:Static Properties:Settings.Default},Mode=TwoWay}"
-                                
-                                />
-        <Button  Margin="4"  Command="{Binding SaveSettingCommand }">确定</Button>
-        <Button  Margin="4"  Command="{Binding  ReloadSettingCommand }">默认</Button>
+        <TabControl>
+            <TabItem Header="主题">
+                <StackPanel>
+                    <Controls:ThemesManger  Margin="12" 
+                                    SelectedAccentColor="{Binding Path=SelectedAccentColor,Source={x:Static Properties:Settings.Default},Mode=TwoWay}" 
+                                    SelectedFontSize="{Binding Path=SelectedFontSize,Source={x:Static Properties:Settings.Default},Mode=TwoWay}"
+                                    SelectedTheme="{Binding Path=SelectedTheme,Source={x:Static Properties:Settings.Default},Mode=TwoWay}"
+                                    />
+                    <Button  Margin="4"  Command="{Binding SaveSettingCommand }" Click="Button_Click">确定</Button>
+                    <Button  Margin="4"  Command="{Binding  ReloadSettingCommand }">默认</Button>
 
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="参数">
+                <Grid Margin="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Margin="8"  Style="{StaticResource TextBlockNormal}">AK</TextBlock>
+                    <TextBox Margin="8" Grid.Column="1" Text="{Binding Path=AK,Source={x:Static Properties:Settings.Default},Mode=TwoWay}"></TextBox>
+                    <TextBlock Margin="8" Grid.Row="1" Style="{StaticResource ResourceKey=TextBlockNormal}">PK</TextBlock>
+                    <TextBox Margin="8" Grid.Row="1" Grid.Column="1" Text="{Binding Path=SK,Source={x:Static Properties:Settings.Default},Mode=TwoWay}" ></TextBox>
+                    <Button  Margin="8" Grid.Row="2" Grid.ColumnSpan="2"  Command="{Binding SaveSettingCommand }" Click="Button_Click">确定</Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </StackPanel>
 </WPFWindows:WindowBase>

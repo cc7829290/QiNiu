@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QINIU.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QINIUYUN.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="SelectedAccentColor" Type="System.Windows.Media.Color" Scope="User">
@@ -10,6 +10,15 @@
     </Setting>
     <Setting Name="SelectedTheme" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AK" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pqkLh_2alUde8dfZxUNzAEhsVBB1ig9cqnEX-XuQ</Value>
+    </Setting>
+    <Setting Name="SK" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HY3IEMlucIZ2oBZrHtlE7vGeb4ZIwq6aUzx_eIig</Value>
+    </Setting>
+    <Setting Name="tes" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

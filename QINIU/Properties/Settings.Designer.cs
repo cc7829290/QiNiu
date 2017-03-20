@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QINIU.Properties {
+namespace QINIUYUN.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -56,6 +56,42 @@ namespace QINIU.Properties {
             }
             set {
                 this["SelectedTheme"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("pqkLh_2alUde8dfZxUNzAEhsVBB1ig9cqnEX-XuQ")]
+        public string AK {
+            get {
+                return ((string)(this["AK"]));
+            }
+            set {
+                this["AK"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("HY3IEMlucIZ2oBZrHtlE7vGeb4ZIwq6aUzx_eIig")]
+        public string SK {
+            get {
+                return ((string)(this["SK"]));
+            }
+            set {
+                this["SK"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string tes {
+            get {
+                return ((string)(this["tes"]));
+            }
+            set {
+                this["tes"] = value;
             }
         }
     }
